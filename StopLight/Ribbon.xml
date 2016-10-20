@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+    <ribbon>
+        <tabs>
+            <tab idMso="TabAddIns" label="StopLight">
+                <group id="ActionsGroup" getLabel="ActionsGroupLabel">
+                    <button id="HighlightButton" onAction="Highlight" getLabel="HighlightButtonLabel" size="large" imageMso="ShapeFillColorPickerClassic" />
+                    <button id="RemoveButton" onAction="RemoveHighlight" getLabel="RemoveButtonLabel" size="large" imageMso="Delete"/>
+                </group>
+                <group id="SelectFileGroup" getLabel="SelectFileGroupLabel">
+                    <button id="SelectFileButton" onAction="SelectFile" getLabel="SelectFileButtonLabel" imageMso="FileOpen"/>
+                    <labelControl id="EmptyLabel1" label=" " />
+                    <labelControl id="FileNameLabel" getLabel="FileNameLabelLabel" />
+                </group>
+                <group id="RangeGroup" getLabel="RangeLabel">
+                    <labelControl id="Dropdown_None_Label" getLabel="DropdownNoneLabel" />
+                    <labelControl id="EmptyLabel2" label=" " />
+                    <labelControl id="Dropdown_Green_Label" getLabel="DropdownGreenLabel" />
+                    <labelControl id="Colon1" label="  :  " />
+                    <labelControl id="EmptyLabel3" label=" " />
+                    <labelControl id="Colon2" label="  :  " />
+                    <labelControl id="Dropdown_None_Lower_Label" getLabel="UpdateLowerLabel" />
+                    <labelControl id="EmptyLabel4" label=" " />
+                    <labelControl id="Dropdown_Green_Lower_Label" getLabel="UpdateLowerLabel" />
+                    <dropDown id="Dropdown_None_Upper_Select" onAction="SelectChanged" getItemCount="DropdownCount" getItemLabel="DropdownItemLabels" getSelectedItemIndex="SelectIndex" showImage="false" getEnabled="SelectEnabled" />
+                    <labelControl id="EmptyLabel5" label=" " />
+                    <dropDown id="Dropdown_Green_Upper_Select" onAction="SelectChanged" getItemCount="DropdownCount" getItemLabel="DropdownItemLabels" getSelectedItemIndex="SelectIndex" showImage="false" getEnabled="SelectEnabled" />
+                    <labelControl id="EmptyLabel6" label="　　" />
+                    <labelControl id="EmptyLabel7" label="　　" />
+                    <labelControl id="EmptyLabel8" label="　　" />
+                    <labelControl id="Dropdown_Yellow_Label" getLabel="DropdownYellowLabel" />
+                    <labelControl id="EmptyLabel9" label=" " />
+                    <labelControl id="Dropdown_Red_Label" getLabel="DropdownRedLabel" />
+                    <labelControl id="Colon3" label="  :  " />
+                    <labelControl id="EmptyLabel10" label=" " />
+                    <labelControl id="Colon4" label="  :  " />
+                    <labelControl id="Dropdown_Yellow_Lower_Label" getLabel="UpdateLowerLabel" />
+                    <labelControl id="EmptyLabel11" label=" " />
+                    <labelControl id="Dropdown_Red_Lower_Label" getLabel="UpdateLowerLabel" />
+                    <dropDown id="Dropdown_Yellow_Upper_Select" onAction="SelectChanged" getItemCount="DropdownCount" getItemLabel="DropdownItemLabels" getSelectedItemIndex="SelectIndex" showImage="false" getEnabled="SelectEnabled" />
+                    <labelControl id="label4" label=" " />
+                    <labelControl id="Dropdown_Red_Upper_Label" getLabel="UpdateRedUpperLabel" />
+                </group>
+                <group id="AddUnknownWordsGroup" getLabel="AddUnknownWordsGroupLabel">
+                    <button id="AddUnknownWordsButton" onAction="AddUnknownWords" getLabel="AddUnknownWordsButtonLabel" size="large" imageMso="FileSaveAsExcelXlsx"/>
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+    <contextMenus>
+      <contextMenu idMso="ContextMenuText">
+        <menuSeparator id="MySeparator" />
+        <button id="MyButton" getLabel="ContextMenuLabel" onAction="ContextMenuAddWord" />
+      </contextMenu>
+    </contextMenus>
+</customUI>
